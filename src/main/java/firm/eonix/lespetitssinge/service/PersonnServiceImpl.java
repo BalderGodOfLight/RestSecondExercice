@@ -36,7 +36,7 @@ public class PersonnServiceImpl implements PersonnService {
     @Override
     public List<Personn> getAllPersonnByNameAndFirstName(String name, String firstName) {
         System.out.println(name);
-        return repository.findByNameContaining(name);
+        return repository.getPersonnByNameOrFirstName(name, firstName);
     }
 
 

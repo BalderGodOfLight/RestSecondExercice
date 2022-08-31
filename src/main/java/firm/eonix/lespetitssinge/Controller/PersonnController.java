@@ -38,7 +38,7 @@ public class PersonnController {
             @RequestParam(name ="prenom") String firstName,
             @RequestParam(name = "nom") String name )  {
     
-        List<Personn>  personns = service.getAllPersonnByNameAndFirstName(firstName , name);
+        List<Personn>  personns = service.getAllPersonnByNameAndFirstName(name , firstName);
         if ( personns.isEmpty()) {
             return new ResponseEntity<>(
                     "no data in the database",
